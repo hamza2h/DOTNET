@@ -13,13 +13,7 @@ public class Bibliotheque :IDisposable
 
     public void SupprimerDocument(Guid id)
     {
-        // var doc = _documents.Find(x => x.Id == id);
-        // if (doc != null)
-        // {
-        //     throw new DocumentNonTrouveExeption($"Document avec ID {id} non trouve");
-        // }
-        //
-        // _documents.Remove(doc);
+        
         
         foreach (var doc in _documents)
         {
@@ -39,10 +33,7 @@ public class Bibliotheque :IDisposable
 
     public void RechherDocument(string motCle)
     {
-        // var results = _documents.Where(d =>
-        //     d.Titre.Contains(motCle, StringComparison.OrdinalIgnoreCase) ||
-        //     d.Auteur.Contains(motCle, StringComparison.OrdinalIgnoreCase)
-        // ).ToList();
+   
         List<Document> results = new List<Document>();
         foreach (var doc in _documents)
         {
